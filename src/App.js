@@ -1,15 +1,11 @@
-
-import './App.css';
-import Header from './Components/Header';
-import Home from './Components/Home';
-import Newtask from './Components/Newtask';
+import React from "react";
+import "./App.css";
+import TodoList from "./Components/TodoList";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Home />
-      <Newtask />
+    <div className="todo-app">
+      <TodoList />
     </div>
   );
 }
