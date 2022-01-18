@@ -4,7 +4,7 @@ import './Header.css'
 export default function Header() {
     return (
         <div className="header">
-            Two Do List 
+            <h1>{count}</h1>
         </div>
     )
 }
