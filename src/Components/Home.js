@@ -15,10 +15,12 @@ export default function Home() {
   const [search, setSearch] = useState('');
 
   const onChange = e => {
-    console.log('click', e)
     setSearch(e.target.value);
   }
 
+  useEffect(() => {
+    // onChange()
+  }, [])
   
   return (
     <>
