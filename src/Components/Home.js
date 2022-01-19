@@ -9,22 +9,28 @@
 //     )
 // }
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Home() {
-  const [count, setCount] = useState(0);
+  const [search, setSearch] = useState('');
 
-  const add = () => setCount(count + 1);
+  const onChange = e => {
+    console.log('click', e)
+    setSearch(e.target.value);
+  }
 
-  const deduct = () => setCount(count - 1)
+  
   return (
     <>
-      <h1>Hook State</h1>
-      <nav>
-          <button onClick={add}>+</button>
-          <button onClick={deduct}>-</button>
-          <h1>{count}</h1>
-      </nav>
+      <div>
+        <div>
+          <input placeholder="buscate algo" onChange={onChange}/>
+        </div>
+        <div>
+          {/* <button onClick={onChange}>Buscar</button> */}
+          <div>{search}</div>
+        </div>
+      </div>
     </>
   );
 }
